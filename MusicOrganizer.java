@@ -82,10 +82,11 @@ public class MusicOrganizer
     {
         player.stop();
     }
-     public void listAllFiles()
-    {
-        for (String filename : files) {
-            System.out.println(filename);
+     public void listAllFiles () {
+        int position = 1;
+        for (String filename : files){
+            System.out.println(position + ": " + filename) ;
+            position = position + 1;
         }
     }
 }
