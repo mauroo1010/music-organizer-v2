@@ -45,9 +45,10 @@ public class MusicOrganizer
      * List a file from the collection.
      * @param index The index of the file to be listed.
      */
-    public void listFile()
+    public void listFile(int index)
     {
-        for (String filename : files) {
+        if(index >= 0 && index < files.size()) {
+            String filename = files.get(index);
             System.out.println(filename);
         }
     }
@@ -80,5 +81,11 @@ public class MusicOrganizer
     public void stopPlaying()
     {
         player.stop();
+    }
+     public void listAllFiles()
+    {
+        for (String filename : files) {
+            System.out.println(filename);
+        }
     }
 }
