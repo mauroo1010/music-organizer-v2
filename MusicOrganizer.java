@@ -69,7 +69,7 @@ public class MusicOrganizer
      * Use stopPlaying() to stop it playing.
      * @param index The index of the file to be played.
      */
-    public void startPlaying(int index)
+     public void startPlaying(int index)
     {
         String filename = files.get(index);
         player.startPlaying(filename);
@@ -89,4 +89,13 @@ public class MusicOrganizer
             position = position + 1;
         }
     }
-}
+    public void listMatching(String searchString) {
+        for(String filename : files) {
+            if(filename.contains(searchString)) {
+                System.out.println(filename);
+            }
+        }
+    }
+
+    }
+
