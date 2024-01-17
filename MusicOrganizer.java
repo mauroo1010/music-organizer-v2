@@ -90,12 +90,16 @@ public class MusicOrganizer
         }
     }
     public void listMatching(String searchString) {
+        boolean error = false;
         for(String filename : files) {
             if(filename.contains(searchString)) {
                 System.out.println(filename);
+                error = true;
             }
         }
+         if (error == false) {
+            System.out.println("cadena no válida");
+        }
     }
-
-    }
+}
 
