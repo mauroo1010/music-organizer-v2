@@ -83,10 +83,11 @@ public class MusicOrganizer
         player.stop();
     }
      public void listAllFiles () {
-        int position = 1;
-        for (String filename : files){
-            System.out.println(position + ": " + filename) ;
-            position = position + 1;
+        int index = 0;
+        while(index < files.size()) {
+            String filename = files.get(index);
+            System.out.println(filename);
+            index++;
         }
     }
     public void listMatching(String searchString) {
@@ -101,5 +102,11 @@ public class MusicOrganizer
             System.out.println("cadena no válida");
         }
     }
+    public void playSamplesArtist(String busqueda) {
+        for(String file : files) {
+            if(file.contains(busqueda)) {
+                player.playSample(file);
+            }
+        }
+    }
 }
-
