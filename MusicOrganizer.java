@@ -83,11 +83,11 @@ public class MusicOrganizer
         player.stop();
     }
      public void listAllFiles () {
-        int index = 0;
-        while(index < files.size()) {
-            String filename = files.get(index);
-            System.out.println(filename);
-            index++;
+        int positionSong= 0;
+        while(positionSong < files.size()) {
+            String filename = files.get(positionSong);
+            System.out.println(positionSong+ 1 + "-" + filename);
+            positionSong++;
         }
     }
     public void listMatching(String searchString) {
